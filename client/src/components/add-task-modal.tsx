@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { useCreateTask } from "@/hooks/use-tasks";
 import { useToast } from "@/hooks/use-toast";
 
@@ -74,6 +74,9 @@ export function AddTaskModal({ isOpen, onClose }: AddTaskModalProps) {
             <Plus className="w-5 h-5" />
             Add New Task
           </DialogTitle>
+          <DialogDescription>
+            Create a new task and add it to your Todo list. Fill in the details below.
+          </DialogDescription>
         </DialogHeader>
         
         <form onSubmit={handleSubmit} className="space-y-4">
